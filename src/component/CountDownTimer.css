@@ -1,0 +1,38 @@
+.timeInput{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+  }
+  .timeInput p{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .timeInput input{
+    width: 75px;
+  }
+  .timeInput span{
+    margin-left: 10px;
+  }
+  .control-btn{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
+  .control-btn button{
+    width: 70px;
+    height: 25px;
+    background: #5e5e5e;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .timer{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+  }
+  .timer p{
+    font-size: 80px;
+    color: #4861ec;
+    margin: 0;
+  }

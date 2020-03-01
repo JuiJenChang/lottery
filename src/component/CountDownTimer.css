@@ -2,37 +2,53 @@
     position: absolute;
     top: 10%;
     left: 25%;
-  }
-  .timeInput p{
+}
+.timeInput p{
     font-size: 20px;
     font-weight: 600;
-  }
-  .timeInput input{
+}
+.timeInput input{
     width: 75px;
-  }
-  .timeInput span{
+}
+.timeInput span{
     margin-left: 10px;
-  }
-  .control-btn{
+}
+.control-btn{
     position: absolute;
     top: 25%;
     left: 25%;
-  }
-  .control-btn button{
+}
+.control-btn button{
     width: 70px;
     height: 25px;
     background: #5e5e5e;
     color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
-  }
-  .timer{
+}
+.timer{
     position: absolute;
     top: 30%;
     left: 25%;
-  }
-  .timer p{
+}
+.timer p{
     font-size: 80px;
     color: #4861ec;
     margin: 0;
-  }
+}
+.result p{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    background: #303030;
+    color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.winner{
+    font-size: 80px;
+    color: #fa5a5a;
+    margin-top: 20px;
+}

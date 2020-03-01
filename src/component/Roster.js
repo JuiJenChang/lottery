@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import './Roster.css';
 
-function Roster() {
-    const [roster, setRoster] = useState([]);
+function Roster({ roster, addName, removeName }) {
     const [name, setName] = useState('');
-    const [winner, setWinner] = useState('');
-
-    const addName = person => {
-        setRoster([...roster, person]);
-    }
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -18,17 +12,6 @@ function Roster() {
         setName('');
     }
 
-    const removeName = key => {
-        const newRoster = roster.filter((name, i) => {
-            return i !== key
-        });
-        setRoster(newRoster);
-    }
-
-    const random = () => {
-        const winner = Math.floor((Math.random() * roster.length));
-        setWinner(roster[winner]);
-    }
     return (
         <div>
             <div className="addName">
@@ -51,12 +34,6 @@ function Roster() {
                         </li>
                     )}
                 </ul>
-            </div>
-            <div className="result">
-                <button onClick={() => random()}>抽獎結果</button>
-                <div className="winner">
-                    {winner}
-                </div>
             </div>
         </div>
     );

@@ -42,17 +42,3 @@
     top: 50%;
     left: 40%;
 }
-.result button{
-    width: 120px;
-    height: 40px;
-    font-size: 20px;
-    background: #303030;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.winner{
-    font-size: 80px;
-    color: #fa5a5a;
-    margin-top: 20px;
-}

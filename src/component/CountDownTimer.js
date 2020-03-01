@@ -45,26 +45,9 @@ function CountDownTimer({ roster }) {
         }
     }
 
-    const timer = () => {
-        return new Promise((resolve) => {
-            setInterval(() => {
-                tick();
-                resolve();
-            }, 1000)
-        })
-    }
-
     const random = () => {
-        return new Promise((resolve) => {
-            const winner = Math.floor((Math.random() * roster.length));
-            resolve(roster[winner]);
-        })
-    }
-
-    const result = () => {
-        Promise.all([timer(), random()]).then((data) => {
-            setWinner(data);
-        })
+        const winner = Math.floor((Math.random() * roster.length));
+        setWinner(roster[winner]);
     }
 
     const reset = () => {
@@ -79,10 +62,13 @@ function CountDownTimer({ roster }) {
 
     useEffect(() => {
         if (start === true) {
-            result();
+            let timer = setInterval(() => tick(), 1000);
+            if (time.minutes === 0 && time.seconds === 0) {
+                random();
+            }
+            return () => clearInterval(timer);
         }
-        return () => clearInterval(result());
-    }, [start])
+    })
 
     return (
         <div>
